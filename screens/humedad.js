@@ -2,21 +2,20 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons'; // Importa los íconos de MaterialCommunityIcons desde Expo
 
-const Camara = ({ navigation }) => {
+
+
+
+const Humedad = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Pronóstico del Clima</Text>
+      <Text style={styles.title}>Humedad Actual</Text>
       <View style={styles.weatherContainer}>
-        <MaterialCommunityIcons name="weather-sunny" size={120} color="#FFD700" />
-        <Text style={styles.temperature}>25°C</Text>
-        <Text style={styles.description}>Cielo Despejado</Text>
+        <MaterialCommunityIcons name="water-outline" size={120} color="blue" />
+        <Text style={styles.temperature}>75%</Text>
+        <Text style={styles.description}>Humedad Alta</Text>
       </View>
       <View style={styles.buttonContainer}>
-        <Button
-          title="Ir a Inicio"
-          onPress={() => navigation.navigate('Home')}
-          color="#841584" // Cambia el color del botón según tu preferencia
-        />
+       
       </View>
     </View>
   );
@@ -55,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Camara;
+export default Humedad;

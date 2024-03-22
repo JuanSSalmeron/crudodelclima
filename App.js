@@ -4,7 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Homescreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
-import Camara from './screens/Camara';
+//import Camara from './screens/Camara';
+import Temperatura from './screens/temperatura';
+import Humedad from './screens/humedad';
+import Luminosidad from './screens/luminosidad';
 
 const Stack = createStackNavigator();
 
@@ -20,12 +23,22 @@ const App = () => {
         <Stack.Screen
           name="Details"
           component={DetailsScreen}
-          options={{ title: 'Detalles' }}
+          options={{ title: 'Propósito de la aplicación' }}
         />
+           <Stack.Screen
+            name="temperatura"
+            component={Temperatura}
+            options={{ title: 'Temperatura' }}
+          />
           <Stack.Screen
-            name="Camara"
-            component={Camara}
-            options={{ title: 'Camara' }}
+            name="humedad"
+            component={Humedad}
+            options={{ title: 'Humedad' }}
+          />
+          <Stack.Screen
+            name="luminosidad"
+            component={Luminosidad}
+            options={{ title: 'Luminosidad' }}
           />
         </Stack.Navigator>
     </NavigationContainer>
